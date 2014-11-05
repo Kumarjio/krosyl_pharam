@@ -82,7 +82,8 @@ $route['admin/login'] = "admin/authenticate/index";
 $route['admin/validate'] = "admin/authenticate/validateUser";
 $route['admin/logout'] = "admin/authenticate/logout";
 
-
+//settings
+$route['admin/setting/(:any)'] = "admin/settings/editSetting/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

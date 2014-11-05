@@ -62,9 +62,8 @@
                         <li><a href="<?php echo ADMIN_URL . 'article/type' ?>">Products</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings   <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                       	    <li><a href="<?php echo ADMIN_URL . 'article' ?>">Site Settings</a></li>
-                            <li><a href="<?php echo ADMIN_URL . 'article' ?>">Krosyl Contact Settings</a></li>
-                        	<li><a href="<?php echo ADMIN_URL . 'article' ?>">Chemotech Contact Settings</a></li>
+                            <li><a href="<?php echo ADMIN_URL . 'setting/kp_contact' ?>">Krosyl Contact Settings</a></li>
+                        	<li><a href="<?php echo ADMIN_URL . 'setting/ct_contact' ?>">Chemotech Contact Settings</a></li>
                         
                          </ul>   
                         </li>
