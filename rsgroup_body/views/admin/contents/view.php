@@ -14,9 +14,9 @@
             'iDisplayLength': 25,
             "bSort": false,
             "aoColumns": [
-                {"sClass": ""}, {"sClass": "text-center"}, {"sClass": "text-center"}
+                {"sClass": ""}
             ],
-            "sAjaxSource": "<?php echo ADMIN_URL . "slider/getjson"; ?>"
+            "sAjaxSource": "<?php echo ADMIN_URL . "content/getjson"; ?>"
         });
     }
 
@@ -41,7 +41,6 @@
                             url: http_host_js + 'slider/delete/' + current_id,
                             data: id = current_id,
                             success: function() {
-								window.location.reload();
                             }
                         });
                     }
@@ -57,28 +56,26 @@
     }
 </script>
 <div class="col-md-12">
-    <h3>Manage Slider</h3>
+    <h3>Manage Content</h3>
     <hr>
 </div>
 <div class="col-md-12 add_button">
-    <a href="<?php echo ADMIN_URL . 'slider/add'; ?>" class="btn btn-primary">
-        Add New Slider
-    </a>
+   
 </div>
 <div class="col-md-12">
     <table class="table table-bordered" id="list_data">
         <thead>
             <tr align="left">
-                <th>Slider Title</th>
-                <th width="175">Image</th>
-                <th width="25">&nbsp;</th>
+               
+                <th width="175">Title</th>
+               
             </tr>
         </thead>
         <tbody>
             <tr>
+              
                 <td>etc</td>
-                <td>etc</td>
-                <td>etc</td>
+               
             </tr>
         </tbody>
     </table>
