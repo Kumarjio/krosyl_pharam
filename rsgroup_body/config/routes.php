@@ -78,6 +78,7 @@ $route['content/(:any)'] = "frontend/home/viewContent/$1";
 
 //Authenticate
 $route['admin'] = "admin/dashboard/index";
+$route['admin/dashboard'] = "admin/dashboard/index";
 $route['admin/login'] = "admin/authenticate/index";
 $route['admin/validate'] = "admin/authenticate/validateUser";
 $route['admin/logout'] = "admin/authenticate/logout";
@@ -87,6 +88,10 @@ $route['admin/setting/(:any)'] = "admin/settings/editSetting/$1";
 
 //Category
 $route['admin/category/image_remove/(:num)'] = "admin/categories/removeCategoryImage/$1";
+
+//Profile
+$route['admin/profile'] = "admin/profile/index";
+$route['admin/change_password'] = "admin/profile/changePassword";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

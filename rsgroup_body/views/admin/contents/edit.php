@@ -35,7 +35,7 @@
                 Content Title
                 <span class="text-danger">*</span>
             </label>
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <input type="text" name="title" class="form-control required" placeholder="Content Title" value="<?php echo $content->title; ?>"/>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 Content Description
                 <span class="text-danger">*</span>
             </label>
-            <div class="col-md-4">
+            <div class="col-md-8">
             
 
  <textarea name="description" class="summernote-sm"><?php echo $content->description; ?></textarea>
@@ -68,7 +68,7 @@
                 Featured Image
                 <span class="text-danger">&nbsp;</span>
             </label>
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <input type="file" name="image" class="form-control required" placeholder="Content Image"/>
             </div>
             <?php

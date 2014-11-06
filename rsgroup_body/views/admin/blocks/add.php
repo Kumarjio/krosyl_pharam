@@ -37,7 +37,7 @@
                 Block Title
                 <span class="text-danger">*</span>
             </label>
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <input type="text" name="title" class="form-control required" placeholder="Block Title"/>
             </div>
         </div>
@@ -47,7 +47,7 @@
                 Block Description
                 <span class="text-danger">*</span>
             </label>
-            <div class="col-md-4">
+            <div class="col-md-8">
          
 
  <textarea name="description" class="summernote-sm"></textarea>
@@ -59,7 +59,7 @@
                 Block Image
                 <span class="text-danger">*</span>
             </label>
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <input type="file" name="image" class="form-control required" placeholder="Image"/>
             </div>
             <?php

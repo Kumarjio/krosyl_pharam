@@ -7,85 +7,63 @@ class profile extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $session = $this->session->userdata('feedback_session');
+    	
+		$this->layout->setLayout('admin/template/layout_main');
+		$session = $this->session->userdata('admin_session');
+		
         if (empty($session)) {
             $this->session->set_flashdata('error', 'Login First');
-            redirect(base_url() . 'login', 'refresh');
+            redirect(ADMIN_URL. 'login', 'refresh');
         }
     }
 
     public function index() {
-        $session = $this->session->userdata('feedback_session');
-        $data['profile'] = $this->sfs_user_model->getWhere(array('userid' => $session->userid));
-        $this->student_layout->view('student/profile/edit_profile', $data);
+		$session = $this->session->userdata('admin_session');
+		if($this->input->post() != false){
+			
+		$obj = new User();
+	        $obj->where('id', $session->id)->get();	
+			$obj->username=$this->input->post('username');
+			$obj->fullname=$this->input->post('fullname');
+			$obj->email=$this->input->post('email');
+			$obj->save();	
+				$this->session->set_flashdata('success', 'Data Updated Successfully');
+			 redirect(ADMIN_URL . 'profile', 'refresh');
+								
+		} else {
+        	
+			$obj = new User();
+	        $data['profile'] = $obj->where('id', $session->id)->get();
+        	$this->layout->view('admin/profile/edit_profile', $data);
+		}
     }
 
-    function checkusername($userid) {
-        $get = $this->sfs_user_model->getWhere(array('username' => urldecode($_GET['student_username'])));
-        if (count($get) == 1 && $get[0]->userid != $userid) {
-            echo 'false';
-        } else {
-            echo 'true';
-        }
-    }
-
-    function checkemail($userid) {
-        $get = $this->sfs_user_model->getWhere(array('email' => urldecode($_GET['email'])));
-        if (count($get) == 1 && $get[0]->userid != $userid) {
-            echo 'false';
-        } else {
-            echo 'true';
-        }
-    }
 
     function checkOldPassword() {
-        $session = $this->session->userdata('feedback_session');
-        $get = $this->sfs_user_model->getWhere(array('userid' => $session->userid, 'password' => md5($_GET['old_password'])));
-        if (count($get) == 1) {
+        $session = $this->session->userdata('admin_session');
+		$obj = new User();
+        $obj->where(array('id' => $session->id, 'password' => md5($_GET['old_password'])))->get();
+        if ($obj->result_count() == 1) {
             echo 'true';
         } else {
             echo 'false';
         }
     }
 
-    function updateProfile() {
-        $obj = new sfs_user_model();
+  
 
-        $obj->username = $this->input->post('student_username');
-        $obj->fullname = $this->input->post('student_name');
-        $obj->email = $this->input->post('email');
-        $session = $this->session->userdata('feedback_session');
-        $obj->userid = $session->userid;
-        $check = $obj->updateData();
-
-        if ($check == true) {
-            $this->session->set_flashdata('success', 'Update the your profile Successfully');
-        } else {
-            $this->session->set_flashdata('error', 'Error while Editing your profile');
-        }
-
-        redirect(STUDENT_URL . 'profile', 'refresh');
-    }
-
-    function updatePassword() {
-        $obj = new sfs_user_model();
-
-        $obj->password = md5($this->input->post('password'));
-        $session = $this->session->userdata('feedback_session');
-        $obj->userid = $session->userid;
-        $check = $obj->updateData();
-
-        if ($check == true) {
-            $this->session->set_flashdata('success', 'Password Change Successfuly');
-        } else {
-            $this->session->set_flashdata('error', 'Error while changing Password');
-        }
-
-        redirect(STUDENT_URL . 'password_change', 'refresh');
-    }
+  
 
     function changePassword() {
-        $this->student_layout->view('student/profile/change_password');
-    }
+		        $session = $this->session->userdata('admin_session');
+		if($this->input->post() != false){ 
+			 $obj = new User();
+			 $obj->where('id',$session->id)->update('password',md5($this->input->post('password')));
+       		 $this->session->set_flashdata('success', 'Password Change Successfuly');
+       		 redirect(ADMIN_URL . 'change_password', 'refresh');
+		
+		}else{
+        $this->layout->view('admin/profile/change_password');
+    }}
 
 }

@@ -82,7 +82,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo ADMIN_URL . 'profile' ?>">Change Profile</a></li> 
-                                <li><a href="<?php echo ADMIN_URL . 'password' ?>">Change Password</a></li>
+                                <li><a href="<?php echo ADMIN_URL . 'change_password' ?>">Change Password</a></li>
                                 <li><a href="<?php echo ADMIN_URL . 'logout'; ?>">Logout</a></li>
                             </ul>
                         </li>
