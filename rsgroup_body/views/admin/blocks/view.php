@@ -16,7 +16,7 @@
             "aoColumns": [
                 {"sClass": ""}, {"sClass": "text-center"}, {"sClass": "text-center"}
             ],
-            "sAjaxSource": "<?php echo ADMIN_URL . "slider/getjson"; ?>"
+            "sAjaxSource": "<?php echo ADMIN_URL . "block/getjson"; ?>"
         });
     }
 
@@ -31,14 +31,14 @@
         }
 
         $.confirm({
-            'title': 'Manage Slider',
-            'message': 'Do you Want to Delete the Slider?',
+            'title': 'Manage Block',
+            'message': 'Do you Want to Delete the block?',
             'buttons': {
                 'Yes': {'class': 'btn btn-primary',
                     'action': function() {
                         $.ajax({
                             type: 'POST',
-                            url: http_host_js + 'slider/delete/' + current_id,
+                            url: http_host_js + 'block/delete/' + current_id,
                             data: id = current_id,
                             success: function() {
 								window.location.reload();
@@ -57,19 +57,19 @@
     }
 </script>
 <div class="col-md-12">
-    <h3>Manage Slider</h3>
+    <h3>Manage Blocks</h3>
     <hr>
 </div>
 <div class="col-md-12 add_button">
-    <a href="<?php echo ADMIN_URL . 'slider/add'; ?>" class="btn btn-primary">
-        Add New Slider
+    <a href="<?php echo ADMIN_URL . 'block/add'; ?>" class="btn btn-primary">
+        Add New Block
     </a>
 </div>
 <div class="col-md-12">
     <table class="table table-bordered" id="list_data">
         <thead>
             <tr align="left">
-                <th>Slider Title</th>
+                <th>Block Title</th>
                 <th width="175">Image</th>
                 <th width="25">&nbsp;</th>
             </tr>
