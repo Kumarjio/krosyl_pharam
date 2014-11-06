@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
         <link href="<?php echo ADMIN_CSS_URL; ?>bootstrap.css" rel="stylesheet" media="screen">
-        <!-- custom -->
-        <link href="<?php echo ADMIN_CSS_URL; ?>custom.css" rel="stylesheet" media="screen">
         <link href="<?php echo ADMIN_CSS_URL; ?>demo_table_jui.css" rel="stylesheet" />
         <link href="<?php echo ADMIN_CSS_URL; ?>jquery-ui.css" rel="stylesheet" />
         <link href="<?php echo ADMIN_CSS_URL; ?>jquery.confirm.css" rel="stylesheet" />
         <link href="<?php echo ADMIN_CSS_URL; ?>DT_bootstrap.css" rel="stylesheet" />
+        <link href="<?php echo ADMIN_JS_URL; ?>icheck/skins/all.css" rel="stylesheet">
+        <link href="<?php echo ADMIN_JS_URL; ?>chosen/chosen.min.css" rel="stylesheet">
+        <link href="<?php echo ADMIN_JS_URL; ?>summernote/summernote.min.css" rel="stylesheet">
+        <link href="<?php echo ADMIN_JS_URL; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?php echo ADMIN_CSS_URL; ?>custom.css" rel="stylesheet" media="screen">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,6 +28,7 @@
         <script src="<?php echo ADMIN_JS_URL; ?>jquery.confirm.js" type="text/javascript"></script>
         <script src="<?php echo ADMIN_JS_URL; ?>jquery.dataTables.min.js" type="text/javascript"></script>
         <script src="<?php echo ADMIN_JS_URL; ?>DT_bootstrap.js" type="text/javascript"></script>
+
 
         <script type="text/javascript">
             var http_host_js = '<?php echo ADMIN_URL; ?>';
@@ -56,10 +60,10 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                     <li><a href="<?php echo ADMIN_URL . 'slider' ?>">Slider</a></li>
-                        <li><a href="<?php echo ADMIN_URL . 'article' ?>">Homepage Block</a></li>
-                        <li><a href="<?php echo ADMIN_URL . 'menu' ?>">Content Management</a></li>
-                          <li><a href="<?php echo ADMIN_URL . 'page' ?>">Category</a></li>
-                        <li><a href="<?php echo ADMIN_URL . 'article/type' ?>">Products</a></li>
+                        <li><a href="<?php echo ADMIN_URL . 'block' ?>">Homepage Block</a></li>
+                        <li><a href="<?php echo ADMIN_URL . 'content' ?>">Content Management</a></li>
+                          <li><a href="<?php echo ADMIN_URL . 'category' ?>">Category</a></li>
+                        <li><a href="<?php echo ADMIN_URL . 'product' ?>">Products</a></li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings   <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo ADMIN_URL . 'setting/kp_contact' ?>">Krosyl Contact Settings</a></li>
@@ -116,5 +120,9 @@
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="<?php echo ADMIN_JS_URL; ?>bootstrap.min.js"></script>
+        <script src="<?php echo ADMIN_JS_URL; ?>chosen/chosen.jquery.min.js"></script>
+        <script src="<?php echo ADMIN_JS_URL; ?>icheck/icheck.min.js"></script>
+        <script src="<?php echo ADMIN_JS_URL; ?>summernote/summernote.min.js"></script>
+        <script src="<?php echo ADMIN_JS_URL; ?>custom.js" type="text/javascript"></script>
     </body>
 </html>

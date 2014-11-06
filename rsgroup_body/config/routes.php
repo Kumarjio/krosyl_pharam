@@ -45,7 +45,7 @@ if (!defined('BASEPATH'))
 include_once (APPPATH . 'helpers/inflector_helper.php');
 
 $path = explode('/', $_SERVER['REQUEST_URI']);
-$controller = $path[3];
+$controller = @$path[3];
 
 
 $route['admin/'.$controller] = 'admin/'.plural($controller) . "/view" . ucwords($controller);
@@ -84,6 +84,9 @@ $route['admin/logout'] = "admin/authenticate/logout";
 
 //settings
 $route['admin/setting/(:any)'] = "admin/settings/editSetting/$1";
+
+//Category
+$route['admin/category/image_remove/(:num)'] = "admin/categories/removeCategoryImage/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
