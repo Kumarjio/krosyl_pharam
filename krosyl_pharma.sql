@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2014 at 09:36 PM
+-- Generation Time: Nov 06, 2014 at 07:59 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -19,6 +19,53 @@ SET time_zone = "+00:00";
 --
 -- Database: `krosyl_pharma`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blocks`
+--
+
+CREATE TABLE IF NOT EXISTS `blocks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `blocks`
+--
+
+INSERT INTO `blocks` (`id`, `title`, `image`, `description`, `timestamp`) VALUES
+(4, 'product 1', '2d8bdee90950b127b7fecfc714ca1b73.jpg', 'product 1', '2014-11-06 18:06:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contents`
+--
+
+CREATE TABLE IF NOT EXISTS `contents` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `contents`
+--
+
+INSERT INTO `contents` (`id`, `type`, `title`, `image`, `description`, `timestamp`) VALUES
+(1, 'about_us', 'About Us', '5a94e14ad6fa8cfb9c7cdedc9d41ac6e.png', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', '2014-11-06 16:43:44'),
+(2, 'our_vision', 'Our Vision', NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', '2014-11-06 16:43:44'),
+(3, 'our_mission', 'Our Mission', NULL, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', '2014-11-06 16:43:44');
 
 -- --------------------------------------------------------
 
@@ -77,8 +124,7 @@ CREATE TABLE IF NOT EXISTS `sliders` (
 
 INSERT INTO `sliders` (`id`, `slidertitle`, `slidertext`, `sliderimage`, `timestamp`) VALUES
 (4, 'slider2', 'slider2', '2404523dbd6e541d09e275f93c5bfc7e.jpg', '2014-11-05 18:31:11'),
-(5, 'slider3', 'slider3', '2f56dfa4d863c958340c83a2524940f4.png', '2014-11-05 18:46:03'),
-(6, 'slider4', 'slider4', 'f20bcc3bb23f315be720490e16490bfb.jpg', '2014-11-05 18:51:07');
+(5, 'slider3', 'slider3', '2f56dfa4d863c958340c83a2524940f4.png', '2014-11-05 18:46:03');
 
 -- --------------------------------------------------------
 
