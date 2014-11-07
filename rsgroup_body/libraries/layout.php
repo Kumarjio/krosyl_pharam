@@ -39,6 +39,10 @@ class layout
         $loadedData['keywords'] = $this->keywords;
         $loadedData['description'] = $this->description;
         $loadedData['author'] = $this->author;
+        if(!isset($data['is_homepage'])){
+            $data['is_homepage'] = false;
+        }
+        
         $loadedData['content_for_layout'] = $this->obj->load->view($view, $data, true);
         
         if ($return) {

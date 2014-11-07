@@ -33,6 +33,9 @@ if (!defined('IMAGE_URL'))
 if (!defined('JS_URL'))
     define('JS_URL', $config['base_url'] . 'assets/js/');
 
+  if (!defined('PLUGIN_URL'))
+    define('PLUGIN_URL', $config['base_url'] . 'assets/plugins/');
+
 
 if (!defined('ADMIN_CSS_URL'))
     define('ADMIN_CSS_URL', $config['base_url'] . 'assets/admin_assets/css/');
