@@ -33,7 +33,7 @@ class contents extends CI_Controller {
         foreach ($this->datatable->rResult->result_array() as $aRow) {
             $temp_arr = array();
 			
-            $temp_arr[] = '<a href="' . ADMIN_URL . 'content/edit/' . $aRow['id'] . '">' . $aRow['title'] . '</a>';
+            $temp_arr[] = '<a href="' . ADMIN_URL . 'Content/edit/' . $aRow['id'] . '">' . $aRow['title'] . '</a>';
 		
             $temp_arr[] = '<a href="javascript:;" onclick="UpdateRow(this)" class="status" id="' . $aRow['id'] . '">' . 'DELETE' . '</a>';
             $this->datatable->output['aaData'][] = $temp_arr;
@@ -79,7 +79,7 @@ class contents extends CI_Controller {
 						$image = $this->uploadImage();
 						if (isset($image['error'])) {
 						$this->session->set_flashdata('file_errors', $image['error']);
-						redirect(ADMIN_URL . 'content/edit/' . $id, 'refresh');
+						redirect(ADMIN_URL . 'Content/edit/' . $id, 'refresh');
 					} else if (isset($image['upload_data'])) {
 						if (!is_null($obj->Contentimage) && file_exists('assets/admin_assets/images/content_images/' . $obj->image)) {
                             unlink('assets/admin_assets/images/content_images/' . $obj->Contentimage);
