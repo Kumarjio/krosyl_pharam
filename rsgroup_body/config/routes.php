@@ -69,7 +69,7 @@ $route['404_override'] = '';
 
 
 $route['z'] = "frontend/home/viewProductCategory/$1";
-$route['content/(:any)'] = "frontend/home/viewProduct/$1";
+$route['read_more/(:any)/(:num)'] = "frontend/home/readMoreContent/$1/$2";
 $route['market'] = "frontend/home/viewMarket";
 $route['about-us'] = "frontend/home/viewAboutUs";
 $route['contact-us'] = "frontend/home/viewContactUs";
