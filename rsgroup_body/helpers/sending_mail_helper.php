@@ -7,14 +7,15 @@ if (!function_exists('send_mail')) {
         $ci = get_instance();
         $config = Array(
             'protocol' => 'smtp',
-            'smtp_host' => 'mail.sumandeepuniversity.co.in',
-            'smtp_user' => 'it_dept@sumandeepuniversity.co.in',
-            'smtp_pass' => 's@icare4U',
+            'smtp_port' => 587,
+            'smtp_host' => 'mail.rootitsolutions.com',
+            'smtp_user' => 'info@rootitsolutions.com',
+            'smtp_pass' => 'rsgroup@2014',
             'mailtype' => 'html',
         );
         $ci->load->library('email', $config);
         $ci->email->set_newline("\r\n");
-        $ci->email->from('it_dept@sumandeepuniversity.co.in');
+        $ci->email->from('info@rootitsolutions.com', 'Root IT Solutions');
         $ci->email->to($tomailid);
         $ci->email->subject($subject);
         $ci->email->message($message);

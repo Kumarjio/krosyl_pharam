@@ -98,8 +98,29 @@ class home extends CI_Controller {
     }
 
     public function sendMail(){
-    	echo '<pre>';
-    	print_r($_POST);
+    	if($this->input->post() != false){
+            $inquiry = 'General Inquiry';
+            if($this->input->post('inquiry') == 'DCI'){
+                $inquiry = 'Domestic Inquiry';
+            } else if($this->input->post('inquiry') == 'ILI'){
+                $inquiry = 'International Inquiry';
+            } else if($this->input->post('inquiry') == 'SSI'){
+                $inquiry = 'Sales Inquiry';
+            } else if($this->input->post('inquiry') == 'SRI'){
+                $inquiry = 'Supplier Inquiry';
+            }
+
+            $str  = 'Name : ' . $this->input->post('name') . "<br /><br />";
+            $str .= 'Mobile : ' . $this->input->post('mno') . "<br /><br />";
+            $str .= 'Email : ' . $this->input->post('email') . "<br /><br />";
+            $str .= 'Message : ' . nl2br($this->input->post('message'));
+
+            send_mail('info@rootitsolutions.com', $inquiry, $str);
+            $this->session->set_flashdata('success', 'Thank you, we will contact you very soon !!');
+            redirect(base_url() . 'contact-us', 'refresh');
+        } else{
+            redirect(base_url() , 'refresh');
+        }
     }
 
 }
