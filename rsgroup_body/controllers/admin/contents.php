@@ -33,7 +33,7 @@ class contents extends CI_Controller {
         foreach ($this->datatable->rResult->result_array() as $aRow) {
             $temp_arr = array();
 			
-            $temp_arr[] = '<a href="' . ADMIN_URL . 'Content/edit/' . $aRow['id'] . '">' . $aRow['title'] . '</a>';
+            $temp_arr[] = '<a href="' . ADMIN_URL . 'content/edit/' . $aRow['id'] . '">' . $aRow['title'] . '</a>';
 		
             $temp_arr[] = '<a href="javascript:;" onclick="UpdateRow(this)" class="status" id="' . $aRow['id'] . '">' . 'DELETE' . '</a>';
             $this->datatable->output['aaData'][] = $temp_arr;
@@ -43,7 +43,7 @@ class contents extends CI_Controller {
     }
 	
 	function uploadImage() {
-        $this->upload->initialize(array('upload_path' => "./assets/admin_assets/images/Content_images/", 'allowed_types' => 'jpg|jpeg|gif|png|bmp', 'overwrite' => FALSE, 'remove_spaces' => TRUE, 'encrypt_name' => TRUE));
+        $this->upload->initialize(array('upload_path' => "./assets/admin_assets/images/content_images/", 'allowed_types' => 'jpg|jpeg|gif|png|bmp', 'overwrite' => FALSE, 'remove_spaces' => TRUE, 'encrypt_name' => TRUE));
         
         if (!$this->upload->do_upload('image')) {
             $data = array('error' => $this->upload->display_errors());
@@ -54,10 +54,10 @@ class contents extends CI_Controller {
             $this->load->helper('image_manipulation/image_manipulation');
             include_lib_image_manipulation();
             
-            $magicianObj = new imageLib('./assets/admin_assets/images/Content_images/' . $image);
+            $magicianObj = new imageLib('./assets/admin_assets/images/content_images/' . $image);
             
             $magicianObj->resizeImage(1000, 400, 'exact');
-            $magicianObj->saveImage('./assets/admin_assets/images/Content_images/' . $image, 100);
+            $magicianObj->saveImage('./assets/admin_assets/images/content_images/' . $image, 100);
 
         }
         
@@ -79,10 +79,10 @@ class contents extends CI_Controller {
 						$image = $this->uploadImage();
 						if (isset($image['error'])) {
 						$this->session->set_flashdata('file_errors', $image['error']);
-						redirect(ADMIN_URL . 'Content/edit/' . $id, 'refresh');
+						redirect(ADMIN_URL . 'content/edit/' . $id, 'refresh');
 					} else if (isset($image['upload_data'])) {
-						if (!is_null($obj->Contentimage) && file_exists('assets/admin_assets/images/Content_images/' . $obj->image)) {
-                            unlink('assets/admin_assets/images/Content_images/' . $obj->Contentimage);
+						if (!is_null($obj->Contentimage) && file_exists('assets/admin_assets/images/content_images/' . $obj->image)) {
+                            unlink('assets/admin_assets/images/content_images/' . $obj->Contentimage);
                         }
 						$obj->image = $image['upload_data']['file_name'];
 					}

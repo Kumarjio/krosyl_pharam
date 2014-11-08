@@ -55,7 +55,7 @@ class blocks extends CI_Controller {
             
             $magicianObj = new imageLib('./assets/admin_assets/images/featured_images/' . $image);
             
-            $magicianObj->resizeImage(1000, 400, 'exact');
+            $magicianObj->resizeImage(250, 160, 'exact');
             $magicianObj->saveImage('./assets/admin_assets/images/featured_images/' . $image, 100);
 
         }

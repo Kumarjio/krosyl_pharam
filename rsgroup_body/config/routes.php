@@ -67,8 +67,13 @@ $route['404_override'] = '';
  * ******************* FRONT END URL *********************
  * ****************************************************** */
 
-//Pages
-$route['content/(:any)'] = "frontend/home/viewContent/$1";
+
+$route['z'] = "frontend/home/viewProductCategory/$1";
+$route['read_more/(:any)/(:num)'] = "frontend/home/readMoreContent/$1/$2";
+$route['market'] = "frontend/home/viewMarket";
+$route['about-us'] = "frontend/home/viewAboutUs";
+$route['contact-us'] = "frontend/home/viewContactUs";
+$route['send_mail'] = "frontend/home/sendMail";
 
 
 

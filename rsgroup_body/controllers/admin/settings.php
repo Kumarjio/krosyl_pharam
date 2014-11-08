@@ -25,7 +25,7 @@ class settings extends CI_Controller {
                 $obj = new Setting();
                 $obj->where('system_type', $type)->get();
 				foreach($obj as $setting){
-					$obj->where(array('system_type' =>$type, 'system_key' => $setting->system_key))->update('system_value', $this->input->post($setting->system_key));				
+					$obj->where(array('system_type' =>$type, 'system_key' => $setting->system_key))->update('system_value', nl2br($this->input->post($setting->system_key)));				
 				}
 
                 $this->session->set_flashdata('success', 'Data updated successfully');
