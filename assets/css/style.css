@@ -502,7 +502,7 @@ ul.dropdown-menu li a {
 .centersectiontitle {
     background: url(../images/dots.gif) repeat-x scroll 0 0 transparent;
     background-position: center;
-    margin: 10px 0 25px;
+    margin: 17px 0 25px;
     min-height: 20px;
     text-align: center;
 }
@@ -513,6 +513,13 @@ ul.dropdown-menu li a {
     padding-right: 10px;
     padding-left: 10px;
 }
+
+.centersectiontitle h4 .small{
+    display: inline-block;
+    margin: 3px 0 0 0;
+    color: #55b7c8;
+}
+
 .content-image {
     margin-top: 8px;
     padding: 0 15px 0 0;
@@ -535,10 +542,8 @@ dd .fa {
     filter: url("data:image/svg+xml;" utf8, <svg xmlns=\'http: //www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");' filter: gray;
     -webkit-filter: grayscale(0);
 }
-.cat-sidebar {
-    margin-top: 25px;
-}
-.cat-sidebar h3 {
+
+.sidebar h3 {
     font-size: 1.1em;
     color: #FFF;
     padding: 5px;
@@ -547,7 +552,7 @@ dd .fa {
     position: relative;
     margin-bottom: 5px
 }
-.cat-sidebar h3:after {
+.sidebar h3:after {
     content: '';
     position: absolute;
     left: 0;

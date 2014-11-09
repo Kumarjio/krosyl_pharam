@@ -75,7 +75,8 @@ $route['about-us'] = "frontend/home/viewAboutUs";
 $route['contact-us'] = "frontend/home/viewContactUs";
 $route['send_mail'] = "frontend/home/sendMail";
 
-
+$route['category/(:num)'] = "frontend/home/viewCategory/$1";
+$route['product/(:num)'] = "frontend/home/product/$1";
 
 /* * ******************************************************
  * ******************* BACK END URL *********************

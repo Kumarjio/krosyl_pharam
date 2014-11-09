@@ -1,0 +1,11 @@
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
+/assets/admin_assets/images/category_images/*
+/assets/admin_assets/images/content_images/*
+/assets/admin_assets/images/featured_images/*
+/assets/admin_assets/images/product_images/*
+/assets/admin_assets/images/slider_images/*

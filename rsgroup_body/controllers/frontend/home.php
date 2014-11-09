@@ -45,7 +45,7 @@ class home extends CI_Controller {
     }
 
     public function readMoreContent($type, $id){
-    	$array = array('home');
+    	$array = array('home', 'product_domestic', 'product_international');
 
     	if(in_array($type, $array)){
             $data = $this->_commondata();
@@ -60,6 +60,28 @@ class home extends CI_Controller {
     				redirect(base_url(), 'refresh');
     			}
     		}
+
+            if($type == 'product_domestic'){
+                $obj_product = new Product($id);
+                if($obj_product->result_count() == 1){
+                    $data['type']    = 'product_domestic';
+                    $data['content'] = $obj_product->stored;
+                    $this->layout->view('front_end/read_more', $data);
+                } else {
+                    redirect(base_url(), 'refresh');
+                }
+            }
+
+             if($type == 'product_international'){
+                $obj_product = new Product($id);
+                if($obj_product->result_count() == 1){
+                    $data['type']    = 'product_international';
+                    $data['content'] = $obj_product->stored;
+                    $this->layout->view('front_end/read_more', $data);
+                } else {
+                    redirect(base_url(), 'refresh');
+                }
+            }
     	} else {
     		redirect(base_url(), 'refresh');
     	}
@@ -118,6 +140,23 @@ class home extends CI_Controller {
             send_mail('info@rootitsolutions.com', $inquiry, $str);
             $this->session->set_flashdata('success', 'Thank you, we will contact you very soon !!');
             redirect(base_url() . 'contact-us', 'refresh');
+        } else{
+            redirect(base_url() , 'refresh');
+        }
+    }
+
+    public function viewCategory($id){
+        $obj_cat = new Category($id);
+        if($obj_cat->result_count() == 1){
+            $data = $this->_commondata();
+
+            $data['categroy_details'] = $obj_cat->stored;
+
+            $obj_product = new Product();
+            $data['domestic_product'] = $obj_product->getProductByCategoryType($obj_cat->id, 'D');
+            $data['international_product'] = $obj_product->getProductByCategoryType($obj_cat->id, 'I');
+
+            $this->layout->view('front_end/category', $data);
         } else{
             redirect(base_url() , 'refresh');
         }

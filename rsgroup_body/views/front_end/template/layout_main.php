@@ -63,8 +63,9 @@
                         <li class="home-page active"><a href="<?php echo base_url(); ?>"><i class="fa fa-2x fa-home"></i></a></li>
                         <li class="dropdown"><a href="#"  class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Category 1</a></li>
-                                <li><a href="#">Category 2</a></li>
+                                <?php foreach ($category_details as $category) { ?>
+                                    <li><a href="<?php echo base_url() .'category/' . $category->id; ?>"><?php echo $category->name; ?></a></li>
+                                <?php } ?>
                             </ul>
                         </li>
                         <li><a href="<?php echo base_url() .'market'; ?>">Market</a></li>
@@ -96,88 +97,97 @@
             <?php } ?>
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="cat-sidebar">
-                        <h3>Categories</h3>
-                        <ul class="list-1">
-                            <?php foreach ($category_details as $category) { ?>
-                            <li><a href="#"><?php echo $category->name; ?></a></li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                    <?php echo @$content_for_layout; ?>
-                </div>
-            </div>
-        </div>
-        <div class="aside mar-tp-10">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                        <h3 class="margin-top-killer">Contact Krosyl Pharma</h3>
-                        <ul class="contact-info">
-                            <?php if(!empty($kp_contact['address'])) { ?>
-                            <li>
-                                <i class="fa fa-map-marker"></i>
-                                <div class="contact-info-content">
-                                    <div class="title">Address:</div>
-                                    <div class="description"><?php echo $kp_contact['address']; ?></div>
-                                </div>
-                            </li>
-                            <?php } ?>
-                            <?php if(!empty($kp_contact['landline'])) { ?>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                <div class="contact-info-content">
-                                    <div class="title">Telephone:</div>
-                                    <div class="description"><?php echo $kp_contact['landline']; ?></div>
-                                </div>
-                            </li>
-                            <?php } ?>
-                            <?php if(!empty($kp_contact['mobile_1'])) { ?>
-                            <li>
-                                <i class="fa fa-mobile"></i>
-                                <div class="contact-info-content">
-                                    <div class="title">Mobile:</div>
-                                    <div class="description"><?php echo $kp_contact['mobile_1']; ?></div>
-                                </div>
-                            </li>
-                            <?php } ?>
-                            <?php if(!empty($kp_contact['fax'])) { ?>
-                            <li>
-                                <i class="fa fa-fax"></i>
-                                <div class="contact-info-content">
-                                    <div class="title">Fax:</div>
-                                    <div class="description"><?php echo $kp_contact['fax']; ?></div>
-                                </div>
-                            </li>
-                            <?php } ?>
-                            <?php if(!empty($kp_contact['mail_1'])) { ?>
-                            <li>
-                                <i class="fa fa-envelope-o"></i>
-                                <div class="contact-info-content">
-                                    <div class="title">Mail:</div>
-                                    <div class="description"><?php echo $kp_contact['mail_1']; ?></div>
-                                </div>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h2 class="margin-top-killer">From the home of <i>Krosyl Pharmaceutical Pvt. Ltd.</i></h2>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="sidebar">
+                                <h3>Categories</h3>
+                                <ul class="list-1">
+                                    <?php foreach ($category_details as $category) { ?>
+                                        <li><a href="<?php echo base_url() .'category/' . $category->id; ?>"><?php echo $category->name; ?></a></li>
+                                    <?php } ?>
+                                </ul>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <h3 class="margin-top-killer">A male of life our sister firm</h3>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                <img src="<?php echo IMAGE_URL .'chemologo.png'; ?>" />
+
+                            <div class="sidebar">
+                                <h3>Contact Krosyl Pharma</h3>
+                                <ul class="contact-info">
+                                    <?php if(!empty($kp_contact['address'])) { ?>
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        <div class="contact-info-content">
+                                            <div class="title">Address:</div>
+                                            <div class="description"><?php echo $kp_contact['address']; ?></div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+                                    <?php if(!empty($kp_contact['landline'])) { ?>
+                                    <li>
+                                        <i class="fa fa-phone"></i>
+                                        <div class="contact-info-content">
+                                            <div class="title">Telephone:</div>
+                                            <div class="description"><?php echo $kp_contact['landline']; ?></div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+                                    <?php if(!empty($kp_contact['mobile_1'])) { ?>
+                                    <li>
+                                        <i class="fa fa-mobile"></i>
+                                        <div class="contact-info-content">
+                                            <div class="title">Mobile:</div>
+                                            <div class="description"><?php echo $kp_contact['mobile_1']; ?></div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+                                    <?php if(!empty($kp_contact['fax'])) { ?>
+                                    <li>
+                                        <i class="fa fa-fax"></i>
+                                        <div class="contact-info-content">
+                                            <div class="title">Fax:</div>
+                                            <div class="description"><?php echo $kp_contact['fax']; ?></div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+                                    <?php if(!empty($kp_contact['mail_1'])) { ?>
+                                    <li>
+                                        <i class="fa fa-envelope-o"></i>
+                                        <div class="contact-info-content">
+                                            <div class="title">Mail:</div>
+                                            <div class="description"><?php echo $kp_contact['mail_1']; ?></div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <?php echo @$content_for_layout; ?>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="centersectiontitle">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <h2 class="margin-top-killer">From the home of <i>Krosyl Pharmaceutical Pvt. Ltd.</i></h2>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <h3 class="margin-top-killer">A male of life our sister firm</h3>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <img src="<?php echo IMAGE_URL .'chemologo.png'; ?>" />
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
