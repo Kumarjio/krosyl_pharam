@@ -68,6 +68,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo ADMIN_URL . 'setting/kp_contact' ?>">Krosyl Contact Settings</a></li>
                         	<li><a href="<?php echo ADMIN_URL . 'setting/ct_contact' ?>">Chemotech Contact Settings</a></li>
+                            <li><a href="<?php echo ADMIN_URL . 'setting/smtp' ?>">Mail Settings</a></li>
                         
                          </ul>   
                         </li>

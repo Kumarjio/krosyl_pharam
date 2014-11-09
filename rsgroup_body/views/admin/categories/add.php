@@ -11,6 +11,17 @@
                 }
             }
         });
+		 $('.summernote-sm').summernote({
+            height: 200,
+            toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
+        });
     });
     //]]>
 </script>
@@ -43,6 +54,19 @@
 				}
 			?>
         </div>
+
+<div class="form-group">
+            <label for="question" class="col-md-2 control-label">
+                Category Description
+                <span class="text-danger">&nbsp;</span>
+            </label>
+            <div class="col-md-8">
+         
+
+ <textarea name="description" class="summernote-sm"></textarea>
+            </div>
+        </div>
+
 
         <div class="form-group">
             <label class="col-md-2 control-label">&nbsp;</label>

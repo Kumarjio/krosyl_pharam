@@ -18,7 +18,7 @@ class settings extends CI_Controller {
     }
 
 	function editSetting($type) {
-		$array = array('kp_contact','ct_contact');
+		$array = array('kp_contact','ct_contact','smtp');
 
         if (!empty($type) && in_array($type, $array)) {
             if ($this->input->post() !== false) {

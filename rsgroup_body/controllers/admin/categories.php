@@ -60,6 +60,7 @@ class categories extends CI_Controller {
 			}
 			
 			$obj->name = $this->input->post('name');
+			$obj->description = $this->input->post('description');
 			$obj->save();
 			$this->session->set_flashdata('success', 'Data Added Successfully');
 			 redirect(ADMIN_URL . 'category', 'refresh');
@@ -89,6 +90,8 @@ class categories extends CI_Controller {
 				}
 			
 				$obj->name = $this->input->post('name');
+				$obj->description = $this->input->post('description');
+				
 				$obj->save();
 
                 $this->session->set_flashdata('success', 'Data updated successfully');
