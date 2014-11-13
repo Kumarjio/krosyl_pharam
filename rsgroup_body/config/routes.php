@@ -94,6 +94,7 @@ $route['admin/setting/(:any)'] = "admin/settings/editSetting/$1";
 
 //Category
 $route['admin/category/image_remove/(:num)'] = "admin/categories/removeCategoryImage/$1";
+$route['admin/product/image_remove/(:num)'] = "admin/products/removeProductImage/$1";
 
 //Profile
 $route['admin/profile'] = "admin/profile/index";

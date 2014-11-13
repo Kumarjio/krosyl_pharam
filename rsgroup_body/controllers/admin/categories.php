@@ -28,6 +28,7 @@ class categories extends CI_Controller {
         $this->datatable->eColumns = array('id', 'image');
         $this->datatable->sIndexColumn = "id";
         $this->datatable->sTable = " categories";
+        $this->datatable->sOrder = "  Order by name ASC";
         $this->datatable->datatable_process();
 
         foreach ($this->datatable->rResult->result_array() as $aRow) {

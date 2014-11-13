@@ -133,7 +133,7 @@
             <label class="col-md-2 control-label">&nbsp;</label>
             <div class="col-md-8">
                 <button type="submit" class="btn btn-primary">Save</button>
-                <a href="<?php echo ADMIN_URL . 'category' ?>" class="btn btn-inverse">Cancel</a>
+                <a href="<?php echo ADMIN_URL . 'product' ?>" class="btn btn-inverse">Cancel</a>
             </div>
         </div>
 
