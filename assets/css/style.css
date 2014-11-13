@@ -35,7 +35,7 @@ a:hover {
     text-decoration: none;
 }
 a.button {
-    background: #55b7c8;
+    background: #3e4095;
     font-size: 14px;
     line-height: 20px;
     color: #fff;
@@ -45,7 +45,7 @@ a.button {
     box-shadow: 0 1px 1px #fff;
 }
 a.button:hover {
-    background: #131313;
+    background: #f16064;
 }
 a.link {
     text-decoration: none;
@@ -104,7 +104,7 @@ ul.list-1 li a {
     line-height: 25px;
 }
 ul.list-1 li a:hover {
-    color: #44a7bb;
+    color: #f16064;
 }
 /******************************************************************/
 
@@ -268,7 +268,7 @@ h1 {
     color: #fff;
 }
 .social-icons a:hover {
-    color: #000;
+    color: #f16064;
 }
 .icon-1 {
     background: url(../images/icon-1.png) 0 0 no-repeat;
@@ -336,6 +336,10 @@ footer a:hover {
 }
 /**********************form**********************/
 
+.header-row img {
+	width : 50%;
+	margin:0 auto;
+}
 .map {
     width: 270px;
     height: 186px;
@@ -357,7 +361,7 @@ dl dd span {
 dl dd {} dl dd a {} dl dd a:hover {}/* CUSTOM */
 
 h1, h2, h3, h4, h5, h6 {
-    color: #55b7c8;
+    color: #3e4095;
 }
 .navbar, .navbar-collapse.collapse {
   
@@ -375,21 +379,21 @@ h1, h2, h3, h4, h5, h6 {
 nav {
    
     background: #ebebec;
-    margin: 22px 0px 0 0px;
+    margin: 0px 0px 0 0px;
     padding: 4px;
 }
 nav div {
-    background: #55b7c8;
+    background: #3e4095;
 }
 ul.nav {
     margin: 0 1px 0 0;
     display: inline-block;
     float: left;
-    border-right: #7acad7 1px solid;
+    border-right: #fff 1px solid;
 }
 ul.nav li a {
-    border-right: #53b2c3 1px solid;
-    border-left: #82ceda 1px solid;
+    border-right: #fff 1px solid;
+    border-left: #fff 1px solid;
 }
 li.home-page > a {
     border-right: #53b2c3 1px solid;
@@ -400,11 +404,11 @@ li.home-page {
 }
 li.home-page {
     
-    background: #131313 !important;
+    background: #f16064 !important;
     color: #fff;
 }
 ul.nav li a:hover, ul.nav li a:focus, ul.nav li a.active {
-    background: #131313 !important;
+    background: #f16064 !important;
     color: #fff;
 }
 ul.nav li a {
@@ -417,7 +421,7 @@ ul.nav li a {
 }
 .dropdown-menu {
    
-    background: #55b7c8;
+    background: #3e4095;
 }
 ul.dropdown-menu li a {
     font-size: 13px;
@@ -517,7 +521,7 @@ ul.dropdown-menu li a {
 .centersectiontitle h4 .small{
     display: inline-block;
     margin: 3px 0 0 0;
-    color: #55b7c8;
+    color: #3e4095;
 }
 
 .content-image {
@@ -548,9 +552,10 @@ dd .fa {
     color: #FFF;
     padding: 5px;
     padding-left: 25px;
-    background: #55b7c8;
+    background: #3e4095;
     position: relative;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+	text-transform: uppercase;
 }
 .sidebar h3:after {
     content: '';
@@ -561,6 +566,61 @@ dd .fa {
     border-style: solid;
     border-color: rgba(255, 0, 0, 0) rgba(0, 0, 255, 0) rgba(0, 128, 0, 0) #fff;
 }
+
+
+.footercon
+{
+	
+background: #f9f9fb;
+ margin-top:10px;	
+	
+}
+.con-sidebar h3 {
+    font-size: 1.1em;
+    color: #FFF;
+    padding: 5px;
+    padding-left: 25px;
+    background: #3e4095;
+    position: relative;
+    margin-bottom: 5px;
+	text-transform: uppercase;
+}
+.con-sidebar h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-width: 20px 0px 20px 18px;
+    border-style: solid;
+    border-color: rgba(255, 0, 0, 0) rgba(0, 0, 255, 0) rgba(0, 128, 0, 0) #f9f9fb;
+}
+
+
+.con-sidebar ul li:last-child
+{
+border-bottom:0px;	
+}
+
+.foot-hr
+{
+	margin-top: 41px;
+margin-bottom: 32px;
+border: 0;
+border-top: 1px solid #ACAEBA;
+	
+}
+
+.footer-hr
+{
+	margin-top: 41px;
+margin-bottom: 32px;
+border: 0;
+border-top: 1px solid #ACAEBA;
+	
+}
+
+
+
 /* Side bar contact Us ********* */
 
 .contact-info {
@@ -588,12 +648,22 @@ dd .fa {
 .contact-info-content .description {
     font-size: 13px;
 }
+
+.img-kp-logo{
+				height: 150px;
+		margin: 0 auto;
+}
 /* **************** */
 
 @media (min-width: 768px) and (max-width: 991px) {
     ul.nav li a {
         padding: 15px 20px;
    }
+   
+   .img-kp-logo{
+		
+		height: 150px;
+	}
 }
 /* SMALL DESKTOP 767px*/
 
@@ -608,17 +678,32 @@ dd .fa {
        padding: 0;
        float: none !important;
   }
+  
+  .img-kp-logo{
+		
+		height: 150px;
+	}
 }
 /* TABLET < 800px */
 
-@media (max-width: 800px) {}/* PHONE < 640px */
+@media (max-width: 800px) {
+	.img-kp-logo{
+		
+		height: 150px;
+	}
+}
 
-@media (max-width: 640px) {}/* PHONE < 548px */
+@media (max-width: 640px) {
+	.img-kp-logo{
+		
+		height: auto;
+	}
+}
 
-@media (max-width: 548px) {}/* PHONE < 480px */
+@media (max-width: 548px) {}
 
-@media (max-width: 480px) {}/* PHONE < 360px */
+@media (max-width: 480px) {}
 
-@media (max-width: 360px) {}/* PHONE < 320px */
+@media (max-width: 360px) {}
 
 @media (max-width: 320px) {}

@@ -12,7 +12,7 @@ class home extends CI_Controller {
 
     private function _commondata(){
         $obj_category = new Category();
-        $data['category_details'] = $obj_category->get();
+        $data['category_details'] = $obj_category->order_by('name','ASC')->get();
 
         $obj_kp_setting = new Setting();
         $kp_contact = $obj_kp_setting->where('system_type', 'kp_contact')->get();
@@ -161,5 +161,17 @@ class home extends CI_Controller {
             redirect(base_url() , 'refresh');
         }
     }
+	
+	public function viewCertificates(){
+		$data=$this->_commondata();
+	$obj=new Certificate();
+	$obj->order_by('timestamp','DESC')->get();
+	$data['certificates']= $obj;
+
+$this->layout->view('front_end/certificates', $data);
+	
+	}
+	
+	
 
 }

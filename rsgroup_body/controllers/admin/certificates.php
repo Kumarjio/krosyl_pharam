@@ -25,7 +25,7 @@ class certificates extends CI_Controller {
     function getCertificatesJsonData() {
         $this->load->library('datatable');
         $this->datatable->aColumns = array('certificatetitle');
-        $this->datatable->eColumns = array('id', 'certificatetext', 'certificateimage');
+        $this->datatable->eColumns = array('id', 'certificateimage');
         $this->datatable->sIndexColumn = "id";
         $this->datatable->sTable = " certificates";
         $this->datatable->datatable_process();

@@ -74,7 +74,7 @@ $route['market'] = "frontend/home/viewMarket";
 $route['about-us'] = "frontend/home/viewAboutUs";
 $route['contact-us'] = "frontend/home/viewContactUs";
 $route['send_mail'] = "frontend/home/sendMail";
-
+$route['certificates'] = "frontend/home/viewCertificates";
 $route['category/(:num)'] = "frontend/home/viewCategory/$1";
 $route['product/(:num)'] = "frontend/home/product/$1";
 
