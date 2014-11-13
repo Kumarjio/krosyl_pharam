@@ -7,7 +7,7 @@
 			<?php if(!empty($content->image)) { ?>
 				<img src="<?php echo ADMIN_IMAGE_URL .'featured_images/'. $content->image; ?>" class="content-image col-sm-4 img-responsive" />
 			<?php } ?>
-			<?php echo @$content->description; ?>
+			<p class="text-justify"><?php echo @$content->description; ?></p>
 		</div>
 	</div>
 <?php } ?>
@@ -22,7 +22,7 @@
 			<?php if(!empty($content->image)) { ?>
 				<img src="<?php echo ADMIN_IMAGE_URL .'product_images/'. $content->image; ?>" class="content-image col-sm-4 img-responsive" />
 			<?php } ?>
-			<?php echo @$content->description; ?>
+			<p class="text-justify"><?php echo @$content->description; ?></p>
 		</div>
 	</div>
 <?php } ?>
@@ -37,7 +37,7 @@
 			<?php if(!empty($content->image)) { ?>
 				<img src="<?php echo ADMIN_IMAGE_URL .'product_images/'. $content->image; ?>" class="content-image col-sm-4 img-responsive" />
 			<?php } ?>
-			<?php echo @$content->description; ?>
+			<p class="text-justify"><?php echo @$content->description; ?></p>
 		</div>
 	</div>
 <?php } ?>

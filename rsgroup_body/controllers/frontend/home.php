@@ -103,7 +103,7 @@ class home extends CI_Controller {
     	$data = $this->_commondata();
 
     	$obj_content = new Content();
-    	$data['vission'] = $obj_content->where('type','our_vission')->get();
+    	$data['vission'] = $obj_content->where('type','our_vision')->get();
 
     	$obj_content = new Content();
     	$data['mission'] = $obj_content->where('type','our_mission')->get();

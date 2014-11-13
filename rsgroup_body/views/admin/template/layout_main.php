@@ -64,6 +64,9 @@
                         <li><a href="<?php echo ADMIN_URL . 'content' ?>">Content Management</a></li>
                           <li><a href="<?php echo ADMIN_URL . 'category' ?>">Category</a></li>
                         <li><a href="<?php echo ADMIN_URL . 'product' ?>">Products</a></li>
+                          <li><a href="<?php echo ADMIN_URL . 'certificate' ?>">certificate</a></li>
+                        
+                        
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings   <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo ADMIN_URL . 'setting/kp_contact' ?>">Krosyl Contact Settings</a></li>

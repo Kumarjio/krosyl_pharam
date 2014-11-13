@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row header-row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h1><a href="index.html">Krosyl Pharmaceutical Pvt. Ltd.</a></h1>
+                    <h1><a href="index.php">Krosyl Pharmaceutical Pvt. Ltd.</a></h1>
                 </div>
             </div>
             <nav class="navbar " role="navigation">
@@ -60,7 +60,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="home-page active"><a href="<?php echo base_url(); ?>"><i class="fa fa-2x fa-home"></i></a></li>
+                        <li><a href="<?php echo base_url(); ?>"><i class="fa fa-2x fa-home"></i></a></li>
                         <li class="dropdown"><a href="#"  class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <?php foreach ($category_details as $category) { ?>
@@ -108,7 +108,30 @@
                                 </ul>
                             </div>
 
-                            <div class="sidebar">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <?php echo @$content_for_layout; ?>
+                        </div>
+
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+     <div class="row">&nbsp;</div>
+       <div class="row">&nbsp;</div>
+    <div class="row">
+    
+    <div class="col-md-3">
+    <div class="sidebar">
                                 <h3>Contact Krosyl Pharma</h3>
                                 <ul class="contact-info">
                                     <?php if(!empty($kp_contact['address'])) { ?>
@@ -158,22 +181,10 @@
                                     <?php } ?>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <?php echo @$content_for_layout; ?>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="centersectiontitle">
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    </div>
+    <?php /*?><div class="col-md-9">
+     <div class="centersectiontitle"></div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h2 class="margin-top-killer">From the home of <i>Krosyl Pharmaceutical Pvt. Ltd.</i></h2>
@@ -188,9 +199,24 @@
                                 </div>
                             </div>
                         </div>
+    </div><?php */?>
+    
+    <div class="col-md-9">
+		<div class="centersectiontitle">
+			<h4>Krosyl Pharmaceutical Pvt. Ltd.</h4>
+		</div>
+				<div class="col-md-2">	<img src="<?php echo IMAGE_URL .'chemologo.png'; ?>" class="img-thumbnail">
+                <div class="row">&nbsp;</div>
                 </div>
-            </div>
-        </div>
+                 <div class="col-md-10">
+				<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum,Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>	</div>
+              
+  <div class="col-md-9">&nbsp;</div>
+                <div class="col-md-12"><p class="text-justify">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>	</div>
+    </div>
+    </div>
+    
     </div>
     <footer>
         <p>All rights are resreved © 2014 Global</p>
@@ -198,3 +224,7 @@
     </footer>
 </body>
 </html>
+
+
+
+

@@ -4,9 +4,9 @@
 			<h4><?php echo @$vission->title; ?></h4>
 		</div>
 		<?php if(!empty($vission->image)) { ?>
-			<img src="<?php echo ADMIN_IMAGE_URL .'content_images/'. $vission->image; ?>" class="content-image col-sm-4 img-responsive" />
+			<img src="<?php echo ADMIN_IMAGE_URL .'content_images/'. $vission->image; ?>" class="content-image col-sm-2 img-responsive" />
 		<?php } ?>
-		<?php echo @$vission->description; ?>
+		<p class="text-justify"><?php echo @$vission->description; ?></p>
 	</div>
 </div>
 
@@ -16,9 +16,9 @@
 			<h4><?php echo @$mission->title; ?></h4>
 		</div>
 		<?php if(!empty($mission->image)) { ?>
-			<img src="<?php echo ADMIN_IMAGE_URL .'content_images/'. $mission->image; ?>" class="content-image col-sm-4 img-responsive" />
+			<img src="<?php echo ADMIN_IMAGE_URL .'content_images/'. $mission->image; ?>" class="content-image col-sm-2 img-responsive" />
 		<?php } ?>
-		<?php echo @$mission->description; ?>
+		<p class="text-justify"><?php echo @$mission->description; ?></p>
 	</div>
 </div>
 
@@ -28,8 +28,8 @@
 			<h4><?php echo @$aboutus->title; ?></h4>
 		</div>
 		<?php if(!empty($aboutus->image)) { ?>
-			<img src="<?php echo ADMIN_IMAGE_URL .'content_images/'. $aboutus->image; ?>" class="content-image col-sm-4 img-responsive" />
+			<img src="<?php echo ADMIN_IMAGE_URL .'content_images/'. $aboutus->image; ?>" class="content-image col-sm-2 img-responsive" />
 		<?php } ?>
-		<?php echo @$aboutus->description; ?>
+		<p class="text-justify"><?php echo @$aboutus->description; ?></p>
 	</div>
 </div>

@@ -56,7 +56,7 @@ class contents extends CI_Controller {
             
             $magicianObj = new imageLib('./assets/admin_assets/images/content_images/' . $image);
             
-            $magicianObj->resizeImage(1000, 400, 'exact');
+            $magicianObj->resizeImage(200, 200, 'exact');
             $magicianObj->saveImage('./assets/admin_assets/images/content_images/' . $image, 100);
 
         }

@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #55b7c8;
 }
 .navbar, .navbar-collapse.collapse {
-    border-radius: 12px;
+  
 }
 .header-row {
     margin: 15px 0 0 0;
@@ -373,7 +373,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #000;
 }
 nav {
-    border-radius: 12px;
+   
     background: #ebebec;
     margin: 22px 0px 0 0px;
     padding: 4px;
@@ -399,7 +399,7 @@ li.home-page {
     border-radius: 12px 0 0 12px;
 }
 li.home-page {
-    border-radius: 12px 0 0 12px;
+    
     background: #131313 !important;
     color: #fff;
 }
@@ -416,7 +416,7 @@ ul.nav li a {
     padding: 15px 30px;
 }
 .dropdown-menu {
-    width: 100%;
+   
     background: #55b7c8;
 }
 ul.dropdown-menu li a {

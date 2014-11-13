@@ -69,7 +69,7 @@
                 <span class="text-danger">&nbsp;</span>
             </label>
             <div class="col-md-8">
-                <input type="file" name="image" class="form-control required" placeholder="Content Image"/>
+                <input type="file" name="image" class="form-control" placeholder="Content Image"/>
             </div>
             <?php
 				if ($this->session->flashdata('file_errors')) {
