@@ -29,6 +29,7 @@ class products extends CI_Controller {
         $this->datatable->sIndexColumn = "products.id";
         $this->datatable->sTable = " products, categories";
         $this->datatable->myWhere = " Where categories.id=products.category_id";
+        $this->datatable->sOrder = "  Order by products.brand_name ASC";
         $this->datatable->datatable_process();
 
         foreach ($this->datatable->rResult->result_array() as $aRow) {
@@ -70,7 +71,7 @@ class products extends CI_Controller {
 			$this->layout->setField('page_title', 'Add Product');
 
             $obj = new category();
-            $data['categories'] = $obj->get();
+            $data['categories'] = $obj->order_by('name', 'ASC')->get();
 
         	$this->layout->view('admin/products/add', $data);
 		}
@@ -110,7 +111,7 @@ class products extends CI_Controller {
                 $data['product'] = $obj->where('id', $id)->get();
                 
                 $obj = new category();
-                $data['categories'] = $obj->get();
+                $data['categories'] = $obj->order_by('name', 'ASC')->get();
 
                 $this->layout->view('admin/products/edit', $data);
             }
@@ -149,7 +150,7 @@ class products extends CI_Controller {
            $this->session->set_flashdata('error', 'Error in Deleting product image');
         }
 
-        redirect(ADMIN_URL . 'category/edit/' . $id, 'refresh');
+        redirect(ADMIN_URL . 'product/edit/' . $id, 'refresh');
     }
 
     public function uploadImage() {
