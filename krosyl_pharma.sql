@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2014 at 08:03 PM
+-- Generation Time: Nov 13, 2014 at 09:17 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -33,14 +33,16 @@ CREATE TABLE IF NOT EXISTS `blocks` (
   `description` text NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `blocks`
 --
 
 INSERT INTO `blocks` (`id`, `title`, `image`, `description`, `timestamp`) VALUES
-(4, 'product 1', '2d8bdee90950b127b7fecfc714ca1b73.jpg', 'product 1', '2014-11-06 12:36:17');
+(4, 'product 1', '01d13b4f40cbbe2a0cc5978f72f22363.jpg', 'product 1', '2014-11-06 12:36:17'),
+(5, 'product 2', '908f1eb8049e1519d5b4e2ab6795b01d.jpg', '<p><br></p>', '2014-11-13 16:16:08'),
+(6, 'product 3', 'f16da14655c6679b38077364e931200e.jpg', '<p><br></p>', '2014-11-13 16:16:29');
 
 -- --------------------------------------------------------
 
@@ -63,6 +65,30 @@ CREATE TABLE IF NOT EXISTS `categories` (
 INSERT INTO `categories` (`id`, `name`, `image`, `timestamp`) VALUES
 (1, 'Antibiotics', NULL, '2014-11-06 18:22:37'),
 (2, 'Analgesics', NULL, '2014-11-06 18:22:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `certificates`
+--
+
+CREATE TABLE IF NOT EXISTS `certificates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `certificatetitle` varchar(255) NOT NULL,
+  `certificateimage` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `certificates`
+--
+
+INSERT INTO `certificates` (`id`, `certificatetitle`, `certificateimage`, `timestamp`) VALUES
+(1, 'certificate 1', '9cf4f02fc40aa9c5ba86c27a68203762.jpg', '2014-11-13 17:22:44'),
+(2, 'certificate 1', '9cf4f02fc40aa9c5ba86c27a68203762.jpg', '2014-11-13 17:22:44'),
+(3, 'certificate 1', '9cf4f02fc40aa9c5ba86c27a68203762.jpg', '2014-11-13 17:22:44'),
+(4, 'certificate 1', '9cf4f02fc40aa9c5ba86c27a68203762.jpg', '2014-11-13 17:22:44');
 
 -- --------------------------------------------------------
 
@@ -135,8 +161,8 @@ CREATE TABLE IF NOT EXISTS `settings` (
 --
 
 INSERT INTO `settings` (`id`, `system_type`, `system_key`, `system_value`, `timestamp`) VALUES
-(1, 'kp_contact', 'google_address', 'http://regiohelden.de/google-maps/map_en.php?hl=en&amp;q=vadodara%20india+(RegioHelden%20GmbH)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed', '2014-11-05 19:28:09'),
-(2, 'kp_contact', 'address', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not ', '2014-11-05 19:29:35'),
+(1, 'kp_contact', 'google_address', 'http://regiohelden.de/google-maps/map_en.php?hl=en&q=vadodara%20india+(RegioHelden%20GmbH)&ie=UTF8&t=&z=14&iwloc=A&output=embed', '2014-11-05 19:28:09'),
+(2, 'kp_contact', 'address', '9, Vrundan colony,<br />\r\n001-Rajeshwar apartment,<br />\r\nopp. Aishwarya apartment,<br />\r\nEllora park, Vadodara<br />\r\n390-007', '2014-11-05 19:29:35'),
 (3, 'kp_contact', 'mail_1', 'info@rootitsolutions.com', '2014-11-05 19:30:41'),
 (4, 'kp_contact', 'mail_2', 'info@rootitsolutions.com', '2014-11-05 19:31:03'),
 (5, 'kp_contact', 'mail_3', 'info@rootitsolutions.com', '2014-11-05 19:31:21'),
@@ -146,7 +172,7 @@ INSERT INTO `settings` (`id`, `system_type`, `system_key`, `system_value`, `time
 (9, 'kp_contact', 'mobile_1', '1234567890', '2014-11-05 19:31:42'),
 (10, 'kp_contact', 'mobile_2', '1234567890', '2014-11-05 19:31:42'),
 (11, 'kp_contact', 'fax', '1234567890', '2014-11-05 19:31:42'),
-(13, 'ct_contact', 'address', 'Printing and typesetting', '2014-11-05 19:29:35'),
+(13, 'ct_contact', 'address', '9, Vrundan colony,<br />\r\n001-Rajeshwar apartment,<br />\r\nopp. Aishwarya apartment,<br />\r\nEllora park, Vadodara<br />\r\n390-007', '2014-11-05 19:29:35'),
 (14, 'ct_contact', 'mail_1', 'info@rootitsolutions.com', '2014-11-05 19:30:41'),
 (15, 'ct_contact', 'mobile_1', '1234567890', '2014-11-05 19:31:42'),
 (16, 'ct_contact', 'mobile_2', '1234567890', '2014-11-05 19:31:42');
