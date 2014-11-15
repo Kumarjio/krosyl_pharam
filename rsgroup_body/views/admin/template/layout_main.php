@@ -40,7 +40,7 @@
             <div class="row padding-killer margin-killer login-page-header">
                 <div class="container padding-killer">
                     <div class="project-logo-area">
-                        <h2>Krosyl Pharmaceuticals Pvt Ltd.</h2>
+						<img src="<?php echo IMAGE_URL .'Krosyl_Final_Logo.png'; ?>" class="img-responsive">
                     </div>
                 </div>   	
             </div>

@@ -17,6 +17,10 @@
 /*.logo-title{color:#fff; font-size:20px; line-height:70px; margin-left:15px; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);}*/
 .logo-img {margin:10px;}
 
+.project-logo-area img {
+	width: 35%;
+	margin: 0 auto;
+}
 .project-logo-area .jihs_logo {background-color: #ecebe7;}
 .project-logo-area h2 {color: #878988;}
 .project-logo-area h2 span {color: #237b9f;}

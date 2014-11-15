@@ -441,7 +441,7 @@ ul.dropdown-menu li a {
     width: 100%;
 }
 .category-details img {
-    width: 100%;
+   
 }
 .padding-killer {
     padding: 0px !important;
@@ -652,6 +652,50 @@ border-top: 1px solid #ACAEBA;
 .img-kp-logo{
 				height: 150px;
 		margin: 0 auto;
+}
+
+.services:hover {
+-moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+.services {
+background: url(../images/bg_grey0.png);
+padding: 30px 30px 30px 30px;
+margin-bottom: 20px;
+/* max-width: 400px; */
+}
+
+.servtitle {
+margin-bottom: 12px;
+background: #e1e1e1;
+}
+
+.services:hover .servicon, .services:hover .servtitle h3 {
+color: #333;
+-webkit-transition: all .4s ease-in-out;
+-moz-transition: all .4s ease-in-out;
+-o-transition: all .4s ease-in-out;
+-ms-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out;
+}
+.servicon {
+color: #666;
+font-size: 16px;
+font-weight: bold;
+}
+
+.servtitle h3 {
+display: inline;
+font-family: 'OswaldBook', sans-serif;
+font-size: 18px;
+text-transform: uppercase;
+color: #f53;
 }
 /* **************** */
 

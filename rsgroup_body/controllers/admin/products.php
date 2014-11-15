@@ -91,6 +91,10 @@ class products extends CI_Controller {
 						if (!is_null($obj->image) && file_exists('assets/admin_assets/images/product_images/' . $obj->image)) {
                             unlink('assets/admin_assets/images/product_images/' . $obj->image);
                         }
+						
+						if (!is_null($obj->image) && file_exists('assets/admin_assets/images/product_images/thumbnail/' . $obj->image)) {
+							unlink('assets/admin_assets/images/product_images/thumbnail/' . $obj->image);
+						}
 						$obj->image = $image['upload_data']['file_name'];
 					}
 				}
@@ -128,6 +132,10 @@ class products extends CI_Controller {
             if (!is_null($obj->image) && file_exists('assets/admin_assets/images/product_images/' . $obj->image)) {
                 unlink('assets/admin_assets/images/product_images/' . $obj->image);
             }
+			
+			if (!is_null($obj->image) && file_exists('assets/admin_assets/images/product_images/thumbnail/' . $obj->image)) {
+                unlink('assets/admin_assets/images/product_images/thumbnail/' . $obj->image);
+            }
             $obj->delete();
             $this->session->set_flashdata('success', 'Data Deleted Successfully');
         } else {
@@ -142,6 +150,10 @@ class products extends CI_Controller {
             
             if (!is_null($obj->image) && file_exists('assets/admin_assets/images/product_images/' . $obj->image)) {
                 unlink('assets/admin_assets/images/product_images/' . $obj->image);
+            }
+			
+			if (!is_null($obj->image) && file_exists('assets/admin_assets/images/product_images/thumbnail/' . $obj->image)) {
+                unlink('assets/admin_assets/images/product_images/thumbnail/' . $obj->image);
             }
             
             $obj->where('id', $id)->update('image', null);
@@ -160,7 +172,14 @@ class products extends CI_Controller {
             $data = array('error' => $this->upload->display_errors());
         } else {
             $data = array('upload_data' => $this->upload->data('image'));
-
+			$image = str_replace(' ', '_', $data['upload_data']['file_name']);
+			$this->load->helper('image_manipulation/image_manipulation');
+			include_lib_image_manipulation();
+			
+			$magicianObj = new imageLib('./assets/admin_assets/images/product_images/' . $image);
+			
+			$magicianObj->resizeImage(150, 125, 'landscape');
+			$magicianObj->saveImage('./assets/admin_assets/images/product_images/thumbnail/' . $image, 100);
         }
         
         return $data;

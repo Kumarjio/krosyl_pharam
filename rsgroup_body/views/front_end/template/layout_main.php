@@ -226,16 +226,17 @@
                 </div>
       </div>
             </div>
-                <div class="row">    <div class="col-md-12">
-               
-               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit maximus enim, vitae placerat dui condimentum ut. Aliquam bibendum commodo blandit. Nam porttitor enim nibh, ac dignissim odio semper id. Fusce eu ultrices mi. Praesent </p>
-            </div></div>
+                
             </div>
             
             
             
             
   </div>
+  <div class="row">
+  	<div class="col-md-12">               
+               <p class="text-justify"><?php echo @$chemotech_content->description; ?></p>
+            </div></div>
         </div>
 <footer>
           <p>All rights are resreved © 2014 Global</p>

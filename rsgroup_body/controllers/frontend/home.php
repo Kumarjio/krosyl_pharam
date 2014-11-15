@@ -25,6 +25,10 @@ class home extends CI_Controller {
         foreach ($ct_contact as $ct_key => $ct_value) {
             $data['ct_contact'][$ct_value->system_key] = $ct_value->system_value;
         }
+		
+		$obj_content = new Content();
+    	$data['chemotech_content'] = $obj_content->where('type','chemotech_content')->get();
+
 
         return $data;
     }
@@ -164,12 +168,10 @@ class home extends CI_Controller {
 	
 	public function viewCertificates(){
 		$data=$this->_commondata();
-	$obj=new Certificate();
-	$obj->order_by('timestamp','DESC')->get();
-	$data['certificates']= $obj;
-
-$this->layout->view('front_end/certificates', $data);
-	
+		$obj=new Certificate();
+		$obj->order_by('timestamp','DESC')->get();
+		$data['certificates']= $obj;
+		$this->layout->view('front_end/certificates', $data);
 	}
 	
 	

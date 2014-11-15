@@ -39,3 +39,8 @@ body{background-size:auto;}
 .footer-text{color:#428BCA; font-weight:bold;}
 
 .no-bg{background:none !important;}
+
+.project-logo-area img  {
+	width: 50% !important;
+	margin:0 auto;
+}
