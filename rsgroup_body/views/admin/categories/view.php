@@ -14,7 +14,7 @@
             'iDisplayLength': 25,
             "bSort": false,
             "aoColumns": [
-                {"sClass": ""}, {"sClass": "text-center"}, {"sClass": "text-center"}
+                {"sClass": ""},  {"sClass": "text-center"}
             ],
             "sAjaxSource": "<?php echo ADMIN_URL . "category/getjson"; ?>"
         });
@@ -70,13 +70,11 @@
         <thead>
             <tr align="left">
                 <th>Category Name</th>
-                <th width="250">Image</th>
                 <th width="25">&nbsp;</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>etc</td>
                 <td>etc</td>
                 <td>etc</td>
             </tr>

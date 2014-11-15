@@ -38,51 +38,7 @@
             <div class="col-md-4">
                 <input type="text" name="name" class="form-control required" placeholder="Category Name" value="<?php echo $category->name; ?>"/>
             </div>
-        </div>
-        
-        <?php if($category->image != ''){ ?>
-        	<div class="form-group">
-                <label for="question" class="col-md-2 control-label">
-                    Current category Image
-                </label>
-                <div class="col-md-2">
-                    <img src="<?php echo ADMIN_IMAGE_URL .'category_images/' . $category->image;?>" class="img-responsive"/>
-                </div>
-                <div class="col-md-2">
-                    <a href="<?php echo ADMIN_URL .'category/image_remove/' . $category->id; ?>"> Remove Image </a>
-                </div>
-            </div>
-        <?php } ?>
-        
-        <div class="form-group">
-            <label for="question" class="col-md-2 control-label">
-                Category Image
-                <span class="text-danger">&nbsp;</span>
-            </label>
-            <div class="col-md-4">
-                <input type="file" name="image" class="form-control" placeholder="Category Image"/>
-            </div>
-            <?php
-				if ($this->session->flashdata('file_errors')) {
-					echo '<label class="error">' . $this->session->flashdata('file_errors') . '</label>';
-				}
-			?>
-        </div>
-
-
-
-		<div class="form-group">
-            <label for="question" class="col-md-2 control-label">
-                Category Description
-                <span class="text-danger">&nbsp;</span>
-            </label>
-            <div class="col-md-8">
-         
-
- <textarea name="description" class="summernote-sm"><?php echo $category->description; ?></textarea>
-            </div>
-        </div>
-        
+        </div>  
         
         
         <div class="form-group">

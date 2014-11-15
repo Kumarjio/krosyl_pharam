@@ -25,7 +25,7 @@ class categories extends CI_Controller {
     public function getCategoriesJsonData() {
         $this->load->library('datatable');
         $this->datatable->aColumns = array('name');
-        $this->datatable->eColumns = array('id', 'image');
+        $this->datatable->eColumns = array('id');
         $this->datatable->sIndexColumn = "id";
         $this->datatable->sTable = " categories";
         $this->datatable->sOrder = "  Order by name ASC";
@@ -34,11 +34,6 @@ class categories extends CI_Controller {
         foreach ($this->datatable->rResult->result_array() as $aRow) {
             $temp_arr = array();
             $temp_arr[] = '<a href="' . ADMIN_URL . 'category/edit/' . $aRow['id'] . '">' . $aRow['name'] . '</a>';
-            if(!empty($aRow['image'])){
-                $temp_arr[] = '<img src="'. ADMIN_IMAGE_URL .'category_images/' . $aRow['image'] .'" height="100"/>';    
-            } else{
-                $temp_arr[] = null;
-            }
 			
             $temp_arr[] = '<a href="javascript:;" onclick="UpdateRow(this)" class="status" id="' . $aRow['id'] . '">' . 'DELETE' . '</a>';
             $this->datatable->output['aaData'][] = $temp_arr;

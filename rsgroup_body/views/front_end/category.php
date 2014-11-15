@@ -17,9 +17,7 @@
 
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="centersectiontitle">
-			<h4>Domestic Marekt</h4>
-		</div>
+		<h4>Domestic Market</h4>
 	</div>
 </div>
 
@@ -61,12 +59,11 @@ if($domestic_product != false) {
 }
 ?>
 
+<div class="centersectiontitle">&nbsp;</div>
 
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="centersectiontitle">
-			<h4>International Marekt</h4>
-		</div>
+		<h4>International Market</h4>
 	</div>
 </div>
 

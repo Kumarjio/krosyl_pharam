@@ -39,33 +39,6 @@
                 <input type="text" name="name" class="form-control required" placeholder="Category Name"/>
             </div>
         </div>
-        
-        <div class="form-group">
-            <label for="question" class="col-md-2 control-label">
-                Category Image
-                <span class="text-danger">&nbsp;</span>
-            </label>
-            <div class="col-md-4">
-                <input type="file" name="image" class="form-control" placeholder="Category Image"/>
-            </div>
-            <?php
-				if ($this->session->flashdata('file_errors')) {
-					echo '<label class="error">' . $this->session->flashdata('file_errors') . '</label>';
-				}
-			?>
-        </div>
-
-<div class="form-group">
-            <label for="question" class="col-md-2 control-label">
-                Category Description
-                <span class="text-danger">&nbsp;</span>
-            </label>
-            <div class="col-md-8">
-         
-
- <textarea name="description" class="summernote-sm"></textarea>
-            </div>
-        </div>
 
 
         <div class="form-group">
