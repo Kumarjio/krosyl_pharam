@@ -33,7 +33,7 @@ class settings extends CI_Controller {
             } else {
                 $this->layout->setField('page_title', 'Edit Setting');
                 $obj= new Setting();
-                $data['settings'] = $obj->where('system_type', $type)->get();
+                $data['settings'] = $obj->where('system_type', $type)->order_by('sequence','ASC')->get();
                 $this->layout->view('admin/settings/edit', $data);
             }
         } else {

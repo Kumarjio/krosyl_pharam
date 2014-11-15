@@ -4,7 +4,7 @@
   <form action="<?php echo ADMIN_URL . 'setting/' . $settings->system_type; ?>" method="post" id="add" class="form-horizontal">
     <?php 
             if(!empty($settings)){ 
-                $array_textarea = array('google_address', 'address');
+                $array_textarea = array('google_address', 'address','branch_address','headoffice_address');
 				
 				$array_password = array('smtp_password');
                     foreach($settings as $setting){
