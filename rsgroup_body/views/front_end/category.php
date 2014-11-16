@@ -39,7 +39,7 @@
 								<td width="50%">
 									<h3><?php echo $domestic->brand_name; ?></h3>
 							        <h5 class="pad-bt-10"><i>(<?php echo $domestic->generic_name; ?>)</i></h5>
-							        <p><?php echo $domestic->description; ?></p>
+							        <p><?php echo html_purify(word_limiter($domestic->description, 150)); ?></p>
 								</td>
 
 								<td class="vertical-middle" width="14%">
