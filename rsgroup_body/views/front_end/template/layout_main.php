@@ -107,7 +107,7 @@
               </div>
 
               <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav pull-right navbar-nav">
                   <li><a href="<?php echo base_url(); ?>">Home</a></li>
                   <li class="dropdown"><a href="#"  class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -135,6 +135,8 @@
       </div>
 
       <?php if($is_homepage){ ?>
+      <br>
+
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div id="slider" class="owl-carousel owl-theme">
@@ -147,6 +149,7 @@
             </div>
           </div>
         </div>
+        
       <?php } ?>
 
       <div class="row">
