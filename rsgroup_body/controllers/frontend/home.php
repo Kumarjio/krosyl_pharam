@@ -148,6 +148,32 @@ class home extends CI_Controller {
             redirect(base_url() , 'refresh');
         }
     }
+	
+	 public function sendChemotechMail(){
+    	if($this->input->post() != false){
+            $inquiry = 'General Inquiry';
+            if($this->input->post('inquiry') == 'ILI'){
+                $inquiry = 'Industrial & Laboratory Chemicals Inquiry';
+            } else if($this->input->post('inquiry') == 'GEI'){
+                $inquiry = 'Glassware Inquiry';
+            } else if($this->input->post('inquiry') == 'ISI'){
+                $inquiry = 'Instruments Inquiry';
+            } else if($this->input->post('inquiry') == 'SSI'){
+                $inquiry = 'Surgicals Inquiry';
+            }
+
+            $str  = 'Name : ' . $this->input->post('name') . "<br /><br />";
+            $str .= 'Mobile : ' . $this->input->post('mno') . "<br /><br />";
+            $str .= 'Email : ' . $this->input->post('email') . "<br /><br />";
+            $str .= 'Message : ' . nl2br($this->input->post('message'));
+
+            send_mail('info@rootitsolutions.com', $inquiry, $str);
+			echo json_encode(array('status'=>'success', 'msg'=>'Thank you, we will contact you very soon !!'));			
+        } else{
+			echo json_encode(array('status'=>'danger', 'msg'=>'Please try after again'));
+        }
+    }
+
 
     public function viewCategory($id){
         $obj_cat = new Category($id);
