@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>Krosyl Pharmaceutical Pvt. Ltd. | A Leading Pharmaceutical Company</title>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="<?php echo IMAGE_URL; ?>favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo CSS_URL; ?>reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo CSS_URL; ?>bootstrap.css">
@@ -25,7 +27,8 @@
           slideSpeed : 300,
           paginationSpeed : 400,
           singleItem:true,
-          autoPlay : true
+          autoPlay : true,
+          pagination : false
         });
       }
 	  
@@ -87,7 +90,7 @@
     <div class="container">
       <div class="row"><div class="col-md-12 header-row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <a href="index.php"><img src="<?php echo IMAGE_URL .'Krosyl_Final_Logo.png'; ?>" class="img-responsive logo"></a>
+            <a href="<?php echo base_url(); ?>"><img src="<?php echo IMAGE_URL .'Krosyl_Final_Logo.png'; ?>" class="img-responsive logo"></a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
           	<div class="row">
