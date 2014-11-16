@@ -602,6 +602,15 @@ table tr td {
     text-transform: uppercase;
 }
 
+.modal-body{
+    padding-bottom:0px; 
+}
+
+.modal-body .btn {
+    float: right;
+    margin: 5px;
+}
+
 /* **************** */
 
 @media (min-width: 768px) and (max-width: 991px) {
