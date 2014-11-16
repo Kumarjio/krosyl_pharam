@@ -338,10 +338,7 @@ footer a:hover {
 }
 /**********************form**********************/
 
-.header-row .logo {
-	width : 31%;
-    float: left;
-}
+
 
 .map {
     width: 270px;
@@ -370,9 +367,13 @@ h1, h2, h3, h4, h5, h6 {
 .navbar, .navbar-collapse.collapse {
   
 }
+
+.navcenter{
+	
+bottom: -20px;	
+}
 .header-row {
-    background: rgba(233,234,232,1);
-    height: 114px;
+    background: rgba(233,234,232,0.1);
 }
 .navbar-collapse {
     padding-right: 0px;
@@ -575,18 +576,17 @@ dd .fa {
     font-size: 13px;
 }
 
-.header-row .logo {
-    width : 31%;
-    float: left;
-}
+
 
 /* **************** */
 
 @media (min-width: 768px) and (max-width: 991px) {
-    ul.nav li a {
-        padding: 15px 20px;
-   }
    
+    .logo{
+	  
+	max-height:135px; 
+	max-width:330px; 
+  }
 }
 /* SMALL DESKTOP 767px*/
 
@@ -596,11 +596,19 @@ dd .fa {
         width: 100%
    }
 
-   .header-row .logo {
-        width : 100%;
-        float: none;
-    }
+ 
+	
+	.navcenter{
+	
+bottom: 0px;	
+}
   
+
+  .logo{
+	  
+	max-height:135px; 
+	max-width:330px; 
+  }
 }
 /* TABLET < 800px */
 

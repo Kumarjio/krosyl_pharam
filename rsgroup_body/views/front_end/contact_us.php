@@ -1,4 +1,10 @@
-<div class="row">
+<script>
+$(document).ready(function(){
+      $('#kpform').validate();
+    });
+
+
+</script><div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="centersectiontitle">
 				<h4>Contact Us</h4>
@@ -24,7 +30,7 @@
 	<br />
 <?php } ?>
 
-<form class="form-horizontal" method="post" action="<?php echo base_url() .'send_mail'; ?>" >
+<form id="kpform" class="form-horizontal" method="post" action="<?php echo base_url() .'send_mail'; ?>" >
 	<fieldset>
 		<legend>Feel free to tell us</legend>
 		<div class="form-group">
