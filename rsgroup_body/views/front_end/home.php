@@ -5,7 +5,8 @@
         echo ($count == 1) ? '<div class="row category-details">' : '' ; 
 ?>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <h3><span class="fa fa-plus-square"></span><?php echo $block->title; ?></h3>
+        	<h3></span><?php echo $block->title; ?></h3>
+        
         <img src="<?php echo ADMIN_IMAGE_URL .'featured_images/'. $block->image; ?>" alt="" class="img-border img-responsive">
         <?php echo character_limiter($block->description, 150); ?>
         <br />

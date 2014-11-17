@@ -38,11 +38,11 @@
 
 								<td width="50%">
 									<h3><?php echo $domestic->brand_name; ?></h3>
-							        <h5 class="pad-bt-10"><i>(<?php echo $domestic->generic_name; ?>)</i></h5>
+							        <h5 class="pad-bt-10 uppercase"><i>(<?php echo $domestic->generic_name; ?>)</i></h5>
 							        <p><?php echo html_purify(word_limiter($domestic->description, 150)); ?></p>
 								</td>
 
-								<td class="vertical-middle" width="14%">
+								<td class="vertical-middle text-center" width="14%">
 									<?php if(!empty($domestic->description)) { ?>
 						        		<span><a href="<?php echo base_url() . 'read_more/product_domestic/' . $domestic->id; ?>" class="button">More</a></span>
 									<?php } ?>
@@ -69,10 +69,10 @@
 
 								<td width="50%">
 									<h3><?php echo $international->generic_name; ?></h3>
-							        <p><?php echo character_limiter($international->description, 150); ?></p>
+							      <p><?php echo html_purify(word_limiter($international->description, 150)); ?></p>
 								</td>
 
-								<td class="vertical-middle" width="14%">
+								<td class="vertical-middle text-center" width="14%">
 									<?php if(!empty($international->description)) { ?>
 						        		<span><a href="<?php echo base_url() . 'read_more/product_international/' . $international->id; ?>" class="button">More</a></span>
 									<?php } ?>

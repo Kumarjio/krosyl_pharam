@@ -110,7 +110,7 @@
               </div>
 
               <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav pull-right navbar-nav">
+                <ul class="nav pull-right navbar-nav  shade-bg">
                   <li><a href="<?php echo base_url(); ?>">Home</a></li>
                   <li class="dropdown"><a href="#"  class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -138,9 +138,7 @@
       </div>
 
       <?php if($is_homepage){ ?>
-      <br>
-
-        <div class="row">
+              <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div id="slider" class="owl-carousel owl-theme">
               <?php foreach($slider_details as $slider) { ?>
@@ -250,46 +248,52 @@
               <div class="sidebar shade-bg">
                 <h3 class="margin-top-killer">Head office</h3>
                 <ul class="contact-info">
-                  <?php if(!empty($kp_contact['address'])) { ?>
+                	<div class="row">
+                    	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        	<?php if(!empty($ct_contact['headoffice_address'])) { ?>
+                                <li>
+                                  <div class="contact-info-content">
+                                    <div class="description">
+                                      <?php echo $ct_contact['headoffice_address']; ?>
+                                    </div>
+                                  </div>
+                                </li>
+                              <?php } ?>
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        	<?php if(!empty($ct_contact['headoffice_telephone'])) { ?>
                     <li>
                       <div class="contact-info-content">
                         <div class="description">
-                          <?php echo $kp_contact['address']; ?>
+                         <b>(T)&nbsp;&nbsp;:</b><?php echo $ct_contact['headoffice_telephone']; ?>
                         </div>
                       </div>
                     </li>
                   <?php } ?>
 
-                  <?php if(!empty($kp_contact['landline'])) { ?>
-                    <li>
-                      <div class="contact-info-content">
-                        <div class="description">
-                          <?php echo $kp_contact['landline']; ?>
-                        </div>
-                      </div>
-                    </li>
-                  <?php } ?>
-
-                  <?php if(!empty($kp_contact['mobile_1'])) { ?>
+                  <?php if(!empty($ct_contact['headoffice_mobile'])) { ?>
                   <li>
                     <div class="contact-info-content">
                       <div class="description">
-                        <?php echo $kp_contact['mobile_1']; ?>
+                       <b>(M)&nbsp;:</b><?php echo $ct_contact['headoffice_mobile']; ?>
                       </div>
                     </div>
                   </li>
                   <?php } ?>
 
 
-                  <?php if(!empty($kp_contact['mail_1'])) { ?>
+                  <?php if(!empty($ct_contact['headoffice_mail'])) { ?>
                   <li>
                     <div class="contact-info-content">
                       <div class="description">
-                        <?php echo $kp_contact['mail_1']; ?>
+                        <b>(M)&nbsp;:</b><?php echo $ct_contact['headoffice_mail']; ?>
                       </div>
                     </div>
                   </li>
                   <?php } ?>
+                        </div>
+                    </div>
                 </ul>
               </div>
             </div>
@@ -298,46 +302,52 @@
               <div class="sidebar shade-bg">
                 <h3 class="margin-top-killer">Branch Office</h3>
                 <ul class="contact-info">
-                  <?php if(!empty($kp_contact['address'])) { ?>
+                	<div class="row">
+                    	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        	<?php if(!empty($ct_contact['branch_address'])) { ?>
+                                <li>
+                                  <div class="contact-info-content">
+                                    <div class="description">
+                                      <?php echo $ct_contact['branch_address']; ?>
+                                    </div>
+                                  </div>
+                                </li>
+                              <?php } ?>
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        	<?php if(!empty($ct_contact['branch_telephone'])) { ?>
                     <li>
                       <div class="contact-info-content">
                         <div class="description">
-                          <?php echo $kp_contact['address']; ?>
+                         <b>(T)&nbsp;&nbsp;:</b><?php echo $ct_contact['branch_telephone']; ?>
                         </div>
                       </div>
                     </li>
                   <?php } ?>
 
-                  <?php if(!empty($kp_contact['landline'])) { ?>
-                    <li>
-                      <div class="contact-info-content">
-                        <div class="description">
-                          <?php echo $kp_contact['landline']; ?>
-                        </div>
-                      </div>
-                    </li>
-                  <?php } ?>
-
-                  <?php if(!empty($kp_contact['mobile_1'])) { ?>
+                  <?php if(!empty($ct_contact['branch_mobile'])) { ?>
                   <li>
                     <div class="contact-info-content">
                       <div class="description">
-                        <?php echo $kp_contact['mobile_1']; ?>
+                       <b>(M)&nbsp;:</b><?php echo $ct_contact['branch_mobile']; ?>
                       </div>
                     </div>
                   </li>
                   <?php } ?>
 
 
-                  <?php if(!empty($kp_contact['mail_1'])) { ?>
+                  <?php if(!empty($ct_contact['branch_mail'])) { ?>
                   <li>
                     <div class="contact-info-content">
                       <div class="description">
-                        <?php echo $kp_contact['mail_1']; ?>
+                        <b>(M)&nbsp;:</b><?php echo $ct_contact['branch_mail']; ?>
                       </div>
                     </div>
                   </li>
                   <?php } ?>
+                        </div>
+                    </div>
                 </ul>
               </div>
             </div>

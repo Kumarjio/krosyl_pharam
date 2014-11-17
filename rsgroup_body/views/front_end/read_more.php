@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="centersectiontitle">
-				<h4><?php echo $content->brand_name; ?>&nbsp;<i class="small">(<?php echo $content->generic_name; ?>)</i></h4>
+				<h4 class="uppercase"><?php echo $content->brand_name; ?>&nbsp;<i class="small">(<?php echo $content->generic_name; ?>)</i></h4>
 			</div>
 			<?php if(!empty($content->image)) { ?>
 				<img src="<?php echo ADMIN_IMAGE_URL .'product_images/'. $content->image; ?>" class="thumbnail mar-rt-10 col-sm-4 img-responsive" />
